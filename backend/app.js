@@ -14,7 +14,7 @@ import path from "path";
 dotenv.config({path: "./config/config.env"})
 const app = express();
 
-const port = process.env.PORT;
+const port = 8080;
 
 connectDB();
 
@@ -22,7 +22,7 @@ connectDB();
 app.use(express.json());
 app.use(
     cors({
-      origin: "https://main.d1sj7cd70hlter.amplifyapp.com",
+      origin: "*",
       credentials: true,
       methods: ["GET", "POST", "PUT", "DELETE"],
     })
